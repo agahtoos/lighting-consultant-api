@@ -1,0 +1,10 @@
+
+services:
+  - type: web
+    name: lighting-consultant-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: OPENAI_API_KEY
+        value: your_openai_api_key_here
